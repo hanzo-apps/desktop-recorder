@@ -150,9 +150,25 @@ export default function App() {
       }
     >
       <div style={{ display: "grid", gap: 16, gridTemplateRows: "auto 1fr" }}>
-        <div className="card" style={{ padding: 0, overflow: "hidden", background: "#000" }}>
+        <div className="card" style={{ padding: 0, overflow: "hidden", background: "#000", position: "relative" }}>
           <video ref={video} muted playsInline
                  style={{ width: "100%", aspectRatio: "16/9", display: "block", background: "#000" }} />
+          {!rec && takes.length === 0 && (
+            <div style={{
+              position: "absolute", inset: 0, display: "grid", placeItems: "center",
+              textAlign: "center", padding: 24, pointerEvents: "none",
+            }}>
+              <div>
+                <div style={{ fontSize: 15, color: "var(--fg)" }}>live preview appears here</div>
+                <p className="dim" style={{ fontSize: 12, maxWidth: 460, margin: "8px auto 0" }}>
+                  The installed app lists every screen and window in the sidebar and
+                  opens the one you pick with no OS prompt — <span className="mono">desktopCapturer</span>,
+                  which no browser exposes. In this tab the same code path uses{" "}
+                  <span className="mono">getDisplayMedia</span>, so hitting record still records.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
         <div>
           <div className="row">
