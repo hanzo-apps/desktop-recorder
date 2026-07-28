@@ -13,7 +13,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-22.04, windows-latest]
+        # Forge's makers only target the host arch, so Apple Silicon and Intel
+        # macs are two legs — otherwise `releases/latest` quietly ships arm64
+        # only and an Intel user downloads something that will not run.
+        include:
+          - { os: macos-latest,   arch: arm64 }
+          - { os: macos-latest,   arch: x64 }
+          - { os: ubuntu-22.04,   arch: x64 }
+          - { os: windows-latest, arch: x64 }
     runs-on: ${{ matrix.os }}
     permissions: { contents: write }
     steps:
@@ -23,7 +30,7 @@ jobs:
       - if: matrix.os == 'ubuntu-22.04'
         run: sudo apt-get update && sudo apt-get install -y rpm fakeroot dpkg
       - run: npm ci
-      - run: npm run make
+      - run: npm run make -- --arch=${{ matrix.arch }}
       - uses: softprops/action-gh-release@v2
         with:
           files: |
