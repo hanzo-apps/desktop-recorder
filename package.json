@@ -1,7 +1,7 @@
 {
   "name": "desktop-recorder",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Screen recorder \u2014 desktopCapturer picks any screen or window with no OS prompt, MediaRecorder writes webm to disk.",
   "license": "MIT",
   "scripts": {
