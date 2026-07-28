@@ -1,6 +1,9 @@
 // Electron Forge + Vite. Three bundles — main, preload, renderer — because
 // contextIsolation is on and the renderer never sees Node.
-export default {
+//
+// CommonJS on purpose: the built main process is CJS (it uses __dirname), so
+// package.json has no "type": "module" and Forge loads this file with require.
+module.exports = {
   packagerConfig: { asar: true, icon: "icons/icon" },
   makers: [
     { name: "@electron-forge/maker-squirrel", config: {} },
