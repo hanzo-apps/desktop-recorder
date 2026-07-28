@@ -1,8 +1,9 @@
 {
   "name": "desktop-recorder",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Screen recorder \u2014 desktopCapturer picks any screen or window with no OS prompt, MediaRecorder writes webm to disk.",
+  "author": "Hanzo AI",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
