@@ -1,13 +1,22 @@
 # Recorder
 
+<!-- hanzo-badges -->
+<p align="left">
+  <a href="https://platform.hanzo.ai/new?repo=https%3A%2F%2Fgithub.com%2Fhanzo-apps%2Fdesktop-recorder&template=desktop-recorder"><img src="https://gallery.hanzo.ai/deploy.svg" alt="Deploy to Hanzo" height="32" /></a>
+  <a href="https://hanzo.ai/chat?template=desktop-recorder"><img src="https://gallery.hanzo.ai/badges/edit-in-hanzo.svg" alt="Edit in Hanzo.ai" height="32" /></a>
+  <a href="https://gallery.hanzo.ai/templates/desktop-recorder"><img src="https://gallery.hanzo.ai/badges/live-preview.svg" alt="Live Preview" height="32" /></a>
+  <a href="https://gallery.hanzo.ai/llms/desktop-recorder/LLM.md"><img src="https://gallery.hanzo.ai/badges/llm-md.svg" alt="LLM.md Playbook" height="32" /></a>
+</p>
+<!-- /hanzo-badges -->
+
 Screen recorder — desktopCapturer picks any screen or window with no OS prompt, MediaRecorder writes webm to disk.
 
 A **Hanzo desktop template**: one codebase, three installers (macOS, Windows,
 Linux) and a web build. Fork it, `npm i`, ship.
 
 - Live web preview: <https://desktop-recorder.hanzo.app>
-- Installers: <https://github.com/hanzo-templates/desktop-recorder/releases/latest>
-- Source: <https://github.com/hanzo-templates/desktop-recorder>
+- Installers: <https://github.com/hanzo-apps/desktop-recorder/releases/latest>
+- Source: <https://github.com/hanzo-apps/desktop-recorder>
 
 ![desktop-recorder](./public/preview.png)
 
